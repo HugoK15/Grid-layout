@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html,body {
+  margin: 20px;
+	padding: 0;
+	background-color: #444;
+}
+
+.characters{
+   display: grid;
+  grid-template-columns:  1fr;
+  grid-gap: 5px;
+  grid-template-areas:
+	  "hero" 
+	  "sidekick-a" 
+	  "sidekick-b" 
+	  "minor-a" 
+	  "minor-b" 
+	  "minor-c" 
+	  "minor-d" 
+	  "minor-e" 
+	  "minor-f"
+	  ;
+}
+
+.character-finn img {
+	width:300px;
+	}
+.character-jack img ,.character-beemo img{
+	width:250px;
+}
+img {
+	width:200px;
+}
+.character {
+
+  color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 30px;
+  text-align :center;
+  border: solid 3px;
+  font-family: Roboto;
+  
+}
+
+.character-finn{
+	grid-area:hero;
+	background-color:#00ADE3;
+	border-color:#FFFFFF;
+}
+.character-jack {
+	grid-area:sidekick-a;
+	background-color:#FCB823;
+	border-color:#FFFFFF;
+	
+}
+.character-beemo{
+	grid-area:sidekick-b;
+	background-color:#BAE0CD;`
+    border-color:#23B1A5;
+	
+}
+.character-marceline{
+	grid-area:minor-a;
+	background-color:#EEF1F3;
+	border-color:#020306;
+}
+.character-rainicorn{
+	grid-area:minor-b;
+	background-color:#E0ABCE;
+	border-color:#F8F390;
+}
+.character-chewingum{
+	grid-area:minor-c;
+	background-color:#E7CEE3;
+	border-color:#F299BF;
+}
+.character-flammes{
+	grid-area:minor-d;
+	background-color:#FFA300;
+	border-color:#FF410B;
+}
+.character-lumpy{
+	grid-area:minor-e;
+	background-color:#BB9DC8;
+	border-color:#FFDF74;
+}
+.character-glaces{
+	grid-area:minor-f;
+	background-color:#A3D8F5;
+	border-color:#0072BC;
+}
+
+@media (min-width:768px){
+.characters{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+	  "hero hero" 
+	  "sidekick-a sidekick-b" 
+	  "minor-a minor-b" 
+	  "minor-c minor-d" 
+	  "minor-e minor-f"
+	  ;
+}
+	}
+
+@media (min-width:1280px){
+.characters{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+  grid-template-areas:
+	  "hero hero hero" 
+	  "sidekick-a sidekick-a sidekick-b" 
+	  "minor-a minor-b minor-c "
+	  "minor-d minor-e minor-f"
+	  ;
+}
+	}
+
